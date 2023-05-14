@@ -52,6 +52,7 @@ class MyApp extends StatelessWidget {
                         Expanded(
                           child: Text('Rs.7,090.00', textAlign: TextAlign.right),
                         ),
+
                       ]),),
                 
                       Expanded(child: Row(children: const <Widget>[
@@ -77,18 +78,18 @@ class MyApp extends StatelessWidget {
                         children: [
                           const Text( "Add Counpon"),
                           
-                          OutlinedButton(
-                            
-                            onPressed: () {}, 
-                            child: 
-                            Text( "", 
+                          Container(
+                            width: 90,
+                            height: 30,
+                            child: TextFormField(
+                              style: const TextStyle( fontWeight: FontWeight.bold),
+                              decoration: InputDecoration(
+                                border: OutlineInputBorder(),
                             ),
-                            style: OutlinedButton.styleFrom(
-                              padding: EdgeInsets.symmetric( horizontal: 20),
-                              side: BorderSide( color: Colors.black),
-                              minimumSize: Size(110, 38)  // điều chỉnh dài, rộng 
-                            ),
-                          ),
+                            onChanged: ( String value) {
+                              
+                            }),
+                          )
                         ],
                       ),
 
@@ -173,31 +174,27 @@ class MyApp extends StatelessWidget {
                                     fontSize: 15,
                                     color: Colors.black
                                   )),
-                                  icon: Icon( Icons.chevron_right_outlined, color: Colors.black,), 
+                                  icon: Icon( Icons.chevron_left, color: Colors.black,), 
                                   style: OutlinedButton.styleFrom(
                                     padding: EdgeInsets.symmetric( horizontal: 20),
                                     side: BorderSide( color: Colors.black),
-                                    minimumSize: Size(70, 50)  //
+                                    minimumSize: Size(70, 53)  //
                                   ),
                                 ),
                           
-                              OutlinedButton(
-                                
-                                onPressed: () {}, 
-                                child: Align( 
-                                  alignment: Alignment.centerLeft,
-                                  child: Text( "71 87 86 729",    // chưa căn trái được
-                                    style: TextStyle(
-                                    fontSize: 15,
-                                    color: Colors.black,
-                                    )),
+                              Container(
+                                width: 240,
+                                height: 50,
+                                child: TextFormField(
+                                  style: const TextStyle( fontWeight: FontWeight.bold),
+                                  decoration: InputDecoration(
+                                    labelText: '71 87 86 729',
+                                    border: OutlineInputBorder(),
                                 ),
-                                style: OutlinedButton.styleFrom(
-                                  padding: EdgeInsets.symmetric( horizontal: 20),
-                                  side: BorderSide( color: Colors.black),
-                                  minimumSize: Size(260, 50)  // điều chỉnh dài, rộng của button
-                                )),
-                                
+                                onChanged: ( String value) {
+                                  
+                                }),
+                              )
                               ],
                         ),
                       ),
